@@ -3,7 +3,6 @@ use super::Token::{self, *};
 pub struct Lexer<'a> {
     input: &'a str,
     prev_token: Option<Token>,
-
 }
 
 impl<'a> Lexer<'a> {
@@ -33,14 +32,14 @@ impl<'a> Iterator for Lexer<'a> {
 
                 self.prev_token = Some(OpenParen);
                 return Some(OpenParen);
-            },
+            }
             ')' => {
                 self.input = &self.input[1..];
 
                 self.prev_token = Some(CloseParen);
                 return Some(CloseParen);
-            },
-            _ => {},
+            }
+            _ => {}
         }
 
         if first.is_ascii_digit() {

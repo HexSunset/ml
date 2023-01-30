@@ -3,12 +3,12 @@
 version = 3
 
 [[package]]
-name = "math_lang_lib"
-version = "0.1.0"
-
-[[package]]
 name = "mlc"
 version = "0.1.0"
 dependencies = [
- "math_lang_lib",
+ "mllib",
 ]
+
+[[package]]
+name = "mllib"
+version = "0.1.0"
